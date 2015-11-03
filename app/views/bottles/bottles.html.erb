@@ -1,0 +1,11 @@
+<% if @number_of_bottles > 0 %>
+  <h1><%= pluralize(@number_of_bottles, 'bottle') %> of beer on the wall,</h1>
+  <h2><%= pluralize(@number_of_bottles, 'bottle') %> of beer</h2>
+
+  <%= link_to 'Take one down...', take_path(@number_of_bottles) %>
+<% else %>
+  <h1>No more bottles of beer on the wall,</h1>
+  <h2>No more bottles of beer</h2>
+
+  <%= link_to 'Go to the store...', store_path %>
+<% end %>
